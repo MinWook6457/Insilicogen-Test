@@ -1,0 +1,25 @@
+package sample;
+
+public class team {
+	private String teamName;
+	
+	private int game, win, draw, lose;
+	
+	public team(String teamName) {
+		this.teamName = null;
+		game = win = draw = lose = 0;
+	}
+	
+	public String getTeamName() {
+		return teamName;
+	}
+	
+	public void setTeamName() {
+		this.teamName = teamName;
+	}
+	
+	public int getGame(int game) {
+		return game;
+	}
+	
+}

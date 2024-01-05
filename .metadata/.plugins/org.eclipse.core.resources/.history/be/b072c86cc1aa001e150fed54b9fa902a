@@ -1,0 +1,10 @@
+package sample;
+
+public class team {
+	private String teamName;
+	
+	private int game, win, draw, lose;
+	
+
+	
+}

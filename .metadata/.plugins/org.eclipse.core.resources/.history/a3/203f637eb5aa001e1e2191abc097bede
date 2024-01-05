@@ -1,0 +1,40 @@
+package Insilicogen;
+
+// 엑셀에서 데이터를 불러오는 클래스
+
+import java.io.File;
+import java.io.FileInputStream;
+
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+
+public class file {
+	String fileName;
+
+	public file(String fileName){ // 생성자
+		this.fileName = fileName; // 내 자신으로 접근
+		
+		try {
+			FileInputStream file = new FileInputStream("2018K리그.xlsx");
+			
+			XSSFWorkbook wb = new XSSFWorkbook(file);
+					
+			
+		}catch(Exception e) {
+			e.printStackTrace(); // 오류 날리기
+		}
+	}
+	
+	public String getFileName() {
+		return fileName;
+	}
+
+	public void setFileName(String fileName) {
+		this.fileName = fileName;
+	}
+	
+	
+}

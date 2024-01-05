@@ -1,0 +1,14 @@
+package sample;
+
+public class team {
+	String teamName;
+	int game, win, draw, lose;
+	
+	public team() {
+		
+	}
+	
+	String getTeamName(String teamName) {
+		return teamName;
+	}
+}
