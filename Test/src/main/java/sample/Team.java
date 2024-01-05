@@ -1,48 +1,28 @@
 package sample;
 
-public class Team {
-	private String teamName;
-	
-	private String game, win, draw, lose;
+class Team {
+    private String name;
+    private int points;
 
+    public Team(String name) {
+        this.name = name;
+    }
 
-	public String getTeamName() {
-		return teamName;
-	}
+    public String getName() {
+        return name;
+    }
+    
+    
 
-	public void setTeamName(String teamName) {
-		this.teamName = teamName;
-	}
+    public int getPoints() {
+        return points;
+    }
+    
+    public void setTeamName(String name) {
+        this.name = name;
+    }
 
-	public String getGame() {
-		return game;
-	}
-
-	public void setGame(String game) {
-		this.game = game;
-	}
-
-	public String getWin() {
-		return win;
-	}
-
-	public void setWin(String win) {
-		this.win = win;
-	}
-
-	public String getDraw() {
-		return draw;
-	}
-
-	public void setDraw(String draw) {
-		this.draw = draw;
-	}
-
-	public String getLose() {
-		return lose;
-	}
-
-	public void setLose(String lose) {
-		this.lose = lose;
-	}
+    public void setPoints(int points) {
+        this.points = points;
+    }
 }

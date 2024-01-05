@@ -30,5 +30,11 @@
 			<attribute name="owner.project.facets" value="jst.web"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/tmp/poi-4.1.2/poi-4.1.2.jar"/>
+	<classpathentry kind="lib" path="C:/tmp/poi-4.1.2/poi-examples-4.1.2.jar"/>
+	<classpathentry kind="lib" path="C:/tmp/poi-4.1.2/poi-ooxml-4.1.2.jar"/>
+	<classpathentry kind="lib" path="C:/tmp/poi-4.1.2/lib/commons-collections4-4.4.jar"/>
+	<classpathentry kind="lib" path="C:/tmp/poi-4.1.2/ooxml-lib/curvesapi-1.06.jar"/>
+	<classpathentry kind="lib" path="C:/tmp/poi-4.1.2/ooxml-lib/xmlbeans-3.1.0.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
