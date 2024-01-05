@@ -24,3 +24,22 @@
 | 제주 | 38 | 14 | 12 | 12 |  
 | 강원 | 38 | 12 | 10 | 16 |  
 | 인천 | 38 | 10 | 12 | 16 |   
+
+## 알아두어야 할 핵심 용어
+
+apache POI 의 주요 클래스들은 주로 `HSSF`, `XSSF` 로 시작
+
+차이점은 아래와 같음
+
+- `HSSF`
+    - Excel 97(-2007) 파일 포맷을 사용할 때 사용
+    - ex) `HSSFWorkbook`, `HSSFSheet`
+- `XSSF`
+    - Excel 2007 OOXML (`.xlsx`) 파일 포맷을 사용할 때 사용
+    - ex) `XSSFWorkbook`, `XSSFSheet`
+
+`Workbook`, `Sheet`, `Row`, `Cell`
+
+- `Workbook`은 하나의 엑셀 파일을 의미
+- `Sheet`는 엑셀파일(= `Workbook`)의 시트를 의미
+- `Row`, `Cell` 은 `Sheet` 안에 있는 행과 열을 의미
