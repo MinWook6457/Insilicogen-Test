@@ -5,6 +5,11 @@ package sample;
 public class Type {
 	private String type;
 	
+	
+	public Type() {
+		//
+	}
+	
 	public Type(String type) {
 		this.type =type;
 	}
@@ -19,8 +24,6 @@ public class Type {
 	
 	@Override
 	public String toString() {
-	    return "Type{" +
-	            "type='" + type + '\'' +
-	            '}';
+	    return type + " ";
 	}
 }

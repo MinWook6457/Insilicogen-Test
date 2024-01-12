@@ -31,8 +31,27 @@ public class readFile {
 
             // 팀 리스트 생성
             List<Team> teams = new ArrayList<>();
+            List<Type> types = new ArrayList<>();
+            
+            XSSFRow rowZero = sheet.getRow(0);
+          
+            
+            for (int colNo = 0; colNo < cols; colNo++) {
+            	Type type = new Type();
+                XSSFCell cell = rowZero.getCell(colNo);
+                
+                // 각 셀의 값을 문자열로 변환
+                String cellValue = getCellValueAsString(cell);
+                type.setType(cellValue);
+                types.add(type);
+            }
+            System.out.println("타입 출력 ");
+            System.out.println(types);
 
             // 각 행을 순회
+            
+            
+            
             for (int rowNo = 1; rowNo < rows; rowNo++) {
                 XSSFRow row = sheet.getRow(rowNo);
 
@@ -47,21 +66,20 @@ public class readFile {
                     String cellValue = getCellValueAsString(cell);
 
                     // 각 열에 따라 팀 객체에 값을 설정
-                    // Type 객체를 사용하고 싶었지만 액셀 열의 값을 아는 경우 아래 코드가 더 깔끔하다고 생각됨.
-                    switch (colNo) { // 팀 , 경기수 , 승 , 무 , 패 순서
-                        case 0:
+                    switch (types.get(colNo).getType()) { // 팀 , 경기수 , 승 , 무 , 패 
+                        case "팀":
                             team.setTeamName(cellValue);
                             break;
-                        case 1:
+                        case "경기수":
                             team.setGames(Integer.parseInt(cellValue));
                             break;
-                        case 2:
+                        case "승":
                             team.setWins(Integer.parseInt(cellValue));
                             break;
-                        case 3:
+                        case "무":
                             team.setDraws(Integer.parseInt(cellValue));
                             break;
-                        case 4:
+                        case "패":
                             team.setLosses(Integer.parseInt(cellValue));
                             break;
                         default:
@@ -137,6 +155,4 @@ public class readFile {
                 return "";
         }
     }
-    
-    
 }

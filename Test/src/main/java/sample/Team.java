@@ -1,8 +1,5 @@
 package sample;
 
-import java.util.Comparator;
-
-// 정렬을 위해 Comparable 인터페이스 상속
 public class Team{
     private String teamName;
     private int games;
